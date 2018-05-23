@@ -13,6 +13,9 @@ public class ButtonControler : MonoBehaviour {
     //Main List Panel Button
     [SerializeField]
     private Button m_MainListExitBtn;
+    private GameObject m_MainMenuPanel;
+    private GameObject m_MainListPanel;
+
 
     // Use this for initialization
     void Start() {
@@ -40,6 +43,11 @@ public class ButtonControler : MonoBehaviour {
     void MainMenuBtnOnClick()
     {
         Debug.Log("Main Menu Clicked");
+
+        GameObject pnMainListPanel = GameObject.Find("Main Contents Panel");
+
+        pnMainListPanel.active = true;
+
     }
 
     void MainListExitBtnOnClick()
